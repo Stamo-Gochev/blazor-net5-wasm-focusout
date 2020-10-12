@@ -4,8 +4,8 @@
     @if (ShouldDisplayItems)
     {
         <ul>
-            <li class="list-item" @onclick="@OnItemClick" tabindex="0">item 1</li>
-            <li class="list-item" @onclick="@OnItemClick" tabindex="0">item 2</li>
+            <li class="list-item list-item-1" @onclick="@OnItemClick" tabindex="0">item 1</li>
+            <li class="list-item list-item-2" @onfocusout="@OnItemFocusOut" @onclick="@OnItemClick" tabindex="0">item 2</li>
         </ul>
     }
 </div>
@@ -24,7 +24,11 @@
     public void OnItemClick()
     {
         ShouldDisplayItems = false;
-        StateHasChanged();
+    }
+
+    public void OnItemFocusOut()
+    {
+        Custom_FocusOut();
     }
 
     public void ToggleShouldDisplayItems()
