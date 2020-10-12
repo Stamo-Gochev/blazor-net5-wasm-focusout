@@ -1,0 +1,41 @@
+﻿@page "/"
+
+<div class="custom-element">
+    @if (ShouldDisplayItems)
+    {
+        <ul>
+            <li class="list-item" @onclick="@OnItemClick" tabindex="0">item 1</li>
+            <li class="list-item" @onclick="@OnItemClick" tabindex="0">item 2</li>
+        </ul>
+    }
+</div>
+
+<div>
+    Item visibility: @(ShouldDisplayItems)
+</div>
+
+<div>
+    <button @onclick="ToggleShouldDisplayItems">Toggle items visibility</button>
+</div>
+
+@code {
+    public bool ShouldDisplayItems { get; set; } = true;
+
+    public void OnItemClick()
+    {
+        ShouldDisplayItems = false;
+        StateHasChanged();
+    }
+
+    public void ToggleShouldDisplayItems()
+    {
+        ShouldDisplayItems = !ShouldDisplayItems;
+    }
+
+    [JSInvokable]
+    public void Custom_FocusOut()
+    {
+        Console.WriteLine("focusout called: " + DateTime.Now.ToString());
+    }
+}
+
