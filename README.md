@@ -16,4 +16,6 @@ An error is thrown
     at Object.beginInvokeDotNetFromJS (blazor.webassembly.js:1)
 
 Using a `@onfocusout` handler does not solve the issue (click on `item 2` to reproduce) as it rhows with another error:
->  Error: System.ArgumentException: There is no event handler associated with this event. EventId: '3'. (Parameter 'eventHandlerId')
+>  Error: System.ArgumentException: There is no event handler associated with this event. EventId: '3'. (Parameter 'eventHandlerId'
+
+> **IMPORTANT:** The issue is not reproducible with the 3.1 version - use the same steps to reproduce as the above with the [TestNet31Wasm](https://github.com/Stamo-Gochev/blazor-net5-wasm-focusout/tree/main/TestNet5Wasm/TestNet31Wasm) app.
