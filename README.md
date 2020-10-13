@@ -1,7 +1,8 @@
 # blazor-net5-wasm-focusout
 
 Refer to:
-https://github.com/dotnet/aspnetcore/issues/26809
+- https://github.com/dotnet/aspnetcore/issues/26809
+- https://github.com/dotnet/aspnetcore/issues/26838
 
 ## Steps to reproduce
 
