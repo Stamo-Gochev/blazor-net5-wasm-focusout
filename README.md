@@ -1,5 +1,8 @@
 # blazor-net5-wasm-focusout
 
+Refer to:
+https://github.com/dotnet/aspnetcore/issues/26809
+
 ## Steps to reproduce
 
 1. Set the [TestNet5Wasm.Server](https://github.com/Stamo-Gochev/blazor-net5-wasm-focusout/tree/master/TestNet5Wasm/TestNet5Wasm/Server) as a startup project.
